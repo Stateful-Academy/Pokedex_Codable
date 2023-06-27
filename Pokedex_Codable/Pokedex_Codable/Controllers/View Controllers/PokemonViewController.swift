@@ -17,7 +17,6 @@ class PokemonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pokemonMovesTableView.delegate = self
         pokemonMovesTableView.dataSource = self
         pokemonSearchBar.delegate = self
     }
@@ -40,7 +39,7 @@ class PokemonViewController: UIViewController {
 }// End
 
 
-extension PokemonViewController: UITableViewDelegate, UITableViewDataSource {
+extension PokemonViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Moves"
